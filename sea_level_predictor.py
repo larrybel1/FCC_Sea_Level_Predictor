@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.stats import linregress
+<<<<<<< HEAD
 
 def draw_plot():
     # Read data from file
@@ -48,6 +49,29 @@ def draw_plot():
 
 
     # Add labels and title
+=======
+import numpy as np 
+
+def draw_plot():
+    ## Read data from file
+    df = pd.read_csv("epa-sea-level.csv")
+    # print(df)
+
+    ## Create scatter plot
+    year = df['Year']
+    sea_level = df['CSIRO Adjusted Sea Level']
+    fig = plt.scatter(x = year, y = sea_level)   #, hue = df_bar['month'], color = 'rainbow')#, label = "Bar")#, = months)
+
+    ## Create first line of best fit
+    slope, intercept, r_value, p_value, std_err = linregress(year, sea_level)
+    sea_level_pred = slope * year + intercept
+    plt.plot(year, sea_level_pred, color = "red", label = "Regression Line")
+
+    ## Create second line of best fit
+
+
+    ## Add labels and title
+>>>>>>> d4e29d6 (updates made, new py file made)
     plt.legend()
     plt.xlabel("Years")
     plt.ylabel("Sea Level (Inches)")
@@ -60,5 +84,9 @@ def draw_plot():
     # return plt.gca()
 
     # Lets see if making a git pull works tomorrow!
+<<<<<<< HEAD
+=======
+    # Made some updated and opened a new py file!
+>>>>>>> d4e29d6 (updates made, new py file made)
 
 draw_plot()
