@@ -23,7 +23,7 @@ def draw_plot():
 
 
     ## Add labels and title
-    #d4e29d6 (updates made, new py file made)
+    
     plt.legend()
     plt.xlabel("Years")
     plt.ylabel("Sea Level (Inches)")
@@ -36,7 +36,6 @@ def draw_plot():
     # return plt.gca()
 
     # Lets see if making a git pull works tomorrow!
-
     # Made some updated and opened a new py file!
 
 draw_plot()
